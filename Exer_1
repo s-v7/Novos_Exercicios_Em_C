@@ -1,0 +1,32 @@
+/*Faça uma função que receba como parâmetro uma nota de um aluno e, se o valor for maior ou 
+igual a 60, imprimir na tela "APROVADO", se for menor, imprimir "REPROVADO". Testar 
+ainda se o valor lido foi maior do que 100 ou menor do que zero. Neste caso, imprimir "NOTA 
+INVÁLIDA"*/
+#include <stdio.h>
+
+//Função Notas
+char notas(float nota_0){
+  
+  if(nota_0 > 100 || nota_0 < 0 ){
+    return printf("NOTA INVÁLIDA");
+  }else if(nota_0 >= 60){
+    return printf("APROVADO");
+  }else{
+    return printf("REPROVADO");
+  }
+  return 0;
+}
+//Função main 
+int main(void) {
+  //
+  float nota_X = 0.0;
+  char resultado;
+   //Enttrada de Dados 
+  printf("Digite uma nota: ");
+    scanf("%f", &nota_X);
+  //
+   resultado = notas(nota_X);
+  //
+  printf(&resultado,nota_X);//Aqui aprendi algo novo depois de muito Esforço 
+return 0;
+}

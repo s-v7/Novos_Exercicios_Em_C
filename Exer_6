@@ -1,0 +1,49 @@
+/*Desenvolva um algoritmo que leia duas notas de um aluno, um trabalho (todos os valores entre 0
+e 10 e sua frequência, definindo e imprimindo se ele foi aprovado, reprovado ou se fará prova
+final. O aluno será reprovado se faltou mais de 15 aulas. Será aprovado se não for reprovado por
+falta e sua média for maior que 6,0. Caso tenha média menor, deverá fazer prova final. O cálculo
+da média deve ser feito com peso 3 para a primeira prova, 5 para a segunda prova e 2 para o
+trabalho.*/
+
+#include <stdio.h>
+#include <math.h>
+
+//função média
+float media(float nota_0,float nota_1,int trabalho){
+  int peso_0 = 3;
+  int peso_1 = 5;
+  int peso_Trabalho = 2;
+
+  float media_Final = ((nota_0*peso_0 + nota_1*peso_1 + trabalho*peso_Trabalho)/ (peso_0+peso_1+peso_Trabalho));
+
+  return media_Final;
+}
+//Função Escola.
+float funcao_Escola(int frequencia,float media){
+
+  if(frequencia <= 15 && media > 6){
+    printf("Aprovado:\nMédia: %.2f\nFrequência: %d",media,frequencia);
+  }else{
+    printf("Reprovado motivo -> Frequência: %d\n", frequencia);
+  }
+   return 0;
+}
+//Função main
+int main() {
+  //
+  float nota_0 = 0.0;
+  float nota_1 = 0.0;
+  int trabalho = 0;
+  int frequencia = 0;
+//    
+printf("Digite a frequência do aluno: ");
+  scanf("%d", &frequencia);
+  printf("Digite a nota_0: ");
+    scanf("%f", &nota_0);
+    printf("Digite a nota_1: ");
+      scanf("%f", &nota_1);
+      printf("Digite a nota do trabalho: ");
+        scanf("%d", &trabalho);
+//
+return funcao_Escola(frequencia,media(nota_0,nota_0,trabalho));
+}

@@ -1,0 +1,60 @@
+/*Desenvolva um programa que pergunte um código e de acordo com o valor digitado seja
+apresentado o cargo correspondente (utilize múltipla escolha). Caso o usuário digite um código
+que não esteja na tabela, mostrar uma mensagem de código inválido. Utilize a tabela abaixo:
+Código   Cargo
+101     Vendedor
+102     Atendente
+103     Auxiliar Técnico
+104     Assistente
+105     Coordenador de Grupo
+106     Gerente*/
+
+#include <stdio.h>
+#include <math.h>
+
+//função Código
+char codigo(int codigo_t){
+  switch(codigo_t){
+    case 101:
+      printf("Vendedor!\n");
+      break;
+    case 102:
+      printf("Atendente!\n");
+      break;
+    case 103:
+      printf("Auxiliar Técnico!\n");
+      break;
+    case 104:
+    printf("Assistente!\n");
+      break;
+    case 105:
+      printf("Coordenador de Cargo!\n");
+      break;
+    case 106:
+      printf("Gerente!\n");
+      break;
+    default:
+      printf("Cargo não existe,Obrigado!\n");
+  }
+  return 0;
+}
+
+//Função 
+int main(){
+//  
+int codigo_0 = 0;
+//
+printf("Digite o código ao qual deseja obter Informações\n");
+printf("Codigo:101->Cargo:Vendedor\n"
+      "Codigo:102->Cargo:Atendente\n"
+      "Codigo:103->Cargo:Auxiliar Técnico\n"
+      "Codigo:104->Cargo:Assistente\n"
+      "Codigo:105->Cargo:Coordenador de Grupo\n"
+      "Codigo:106->Cargo:Gerente\n");
+//      
+printf("Código@$: ");
+  scanf("%d", &codigo_0);
+//
+return codigo(codigo_0);
+
+}

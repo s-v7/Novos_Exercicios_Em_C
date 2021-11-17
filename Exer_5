@@ -1,0 +1,30 @@
+/*Faça um algoritmo que receba o valor do salário de uma pessoa e o valor de um financiamento
+pretendido. Caso o financiamento seja menor ou igual a 5 vezes o salário da pessoa, o algoritmo
+deverá escrever "Financiamento Concedido"; senão, ele deverá escrever "Financiamento
+Negado".*/
+
+#include <stdio.h>
+#include <math.h>
+//Função Financiamento
+float funcao_Financiamento(float salario, int financiamento){
+  
+  if(financiamento <= (5*salario) ){
+     printf("Financiaento Concebido:\n");
+  }else{
+    printf("Financiamento Negado\n");
+  }
+   return 0;
+}
+
+int main() {
+  //
+  float salario = 0.0;
+  float valor_Financiamento = 0.0;
+  //  
+  printf("Digite o Salário Atual: ");
+    scanf("%f", &salario);
+    printf("Digite o Valor do Financiamento: ");
+      scanf("%f", &valor_Financiamento);
+  //
+  return funcao_Financiamento(salario,valor_Financiamento);
+}

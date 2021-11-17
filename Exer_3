@@ -1,0 +1,27 @@
+/*Faça uma função que imprima se um número real recebido como parâmetro é positivo, negativo
+ou neutro (zero).*/
+
+#include <stdio.h>
+
+//Função Notas
+float numero_Real(float n_r){
+  
+  if(n_r == 0 ){
+     printf("É um Número Neutro:");
+  }else if(n_r > 0){
+     printf("É um Número Positivo:");
+  }else if(n_r < 0){
+    printf("É um Número Negativo:");
+  }
+  return 0;
+}
+//Função main
+int main() {
+  //
+  float n_z = 0;
+  //  
+  printf("Digite um Número Real: ");
+    scanf("%f", &n_z);
+  //  
+  return numero_Real(n_z);
+}/*

@@ -1,0 +1,25 @@
+/*Faça uma função que receba um número inteiro e imprima o número lido é par ou ímpar.*/
+
+#include <stdio.h>
+
+//Função Notas
+int numero(int n){
+  int n = 0;
+  if(n % 2 == 0 ){
+     printf("É um Número Par:");
+  }else{
+     printf("É um Número Ímpar:");
+  }
+  return 0;
+}
+
+int main() {
+  //declaração de Variáveis 
+  int n_y = 0;
+
+  //Entrada de Dados
+  printf("Digite um Número Interiro: ");
+    scanf("%d", &n_y);
+  //
+  return numero(n_y);
+}

@@ -1,0 +1,37 @@
+/*Faça a leitura do salário atual e do tempo de serviço de um funcionário. A seguir, em uma
+função, calcule o seu salário reajustado. Funcionários com até 1 ano de empresa, receberão
+aumento de 10%. Funcionários com mais de um ano de tempo de serviço, receberão aumento de
+20%. A função deverá retornar o salário reajustado.*/
+
+#include <stdio.h>
+#include <math.h>
+
+//Função Notas
+float funcao_Salario(float salario,  float tempo_Servico){
+  float aumento = 0.0;  
+  float novo_Salario = 0.0;
+  
+  if(tempo_Servico <= 1 ){
+    aumento = ((0.1) * salario);
+    novo_Salario = (salario + aumento);
+    printf("Seu novo Salário é de: %.2f",novo_Salario);
+  }else if(tempo_Servico > 1){
+    aumento = ((0.2) * salario);
+    novo_Salario = (salario + aumento);
+    printf("Seu novo Salário é: %.2f", novo_Salario);
+  }
+   return 0;
+}
+
+int main() {
+  //
+  float salario_At = 0.0;
+  float tempo_Serv = 0.0;
+  //
+   printf("Digite o tempo de Empresa: ");
+    scanf("%f", &tempo_Serv);
+    printf("Digite o Salário Atual: ");
+      scanf("%f", &salario_At);
+  //
+  return funcao_Salario(salario_At,tempo_Serv);
+}
