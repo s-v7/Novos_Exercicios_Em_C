@@ -6,7 +6,7 @@ aumento de 10%. Funcionários com mais de um ano de tempo de serviço, receberã
 #include <stdio.h>
 #include <math.h>
 
-//Função Notas
+//Função Salário
 float funcao_Salario(float salario,  float tempo_Servico){
   float aumento = 0.0;  
   float novo_Salario = 0.0;
